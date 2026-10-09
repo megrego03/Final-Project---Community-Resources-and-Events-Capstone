@@ -503,6 +503,7 @@ thead th {
     margin-block: 2.5rem;
 }
 
+.events-section > h2,
 .event-volunteer-section > h2 {
     color: var(--brand);
 }
