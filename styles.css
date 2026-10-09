@@ -1,0 +1,143 @@
+:root {
+    --brand: #153a0d;
+    --accent: #ffd727;
+    --ink: #191919;
+    --paper: #fff;
+    --surface: #f1f1f1;
+    --max: 70rem;
+    --space: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font: 1rem/1.5 Arial, sans-serif;
+}
+
+.skip-link {
+    position: absolute;
+    left: .5rem;
+    top: -6rem;
+    z-index: 20;
+    background: var(--paper);
+    color: var(--ink);
+    padding: .75rem;
+}
+
+.skip-link:focus {
+    top: .5rem;
+}
+
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space);
+    background: var(--brand);
+    color: var(--paper);
+    padding: var(--space);
+}
+
+.brand {
+    color: inherit;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.site-header nav {
+    width: 100%;
+}
+
+.menu-button {
+    min-height: 2.75rem;
+    padding: .625rem 1rem;
+    font: inherit;
+    cursor: pointer;
+}
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    list-style: none;
+    margin: .75rem 0 0;
+    padding: 0;
+}
+
+.nav-list a {
+    display: block;
+    color: var(--paper);
+    padding: .75rem;
+    text-decoration: none;
+}
+
+.nav-list a:hover {
+    background: var(--accent);
+    color: var(--ink);
+}
+
+.nav-list a:focus-visible,
+.menu-button:focus-visible {
+    outline: .2rem solid var(--accent);
+    outline-offset: .2rem;
+}
+
+.nav-list a:active {
+    background: var(--paper);
+    color: var(--brand);
+}
+
+.nav-list a[aria-current="page"] {
+    background: var(--paper);
+    color: var(--brand);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.js .nav-list[data-open="false"] {
+    display: none;
+}
+
+.js .nav-list[data-open="true"] {
+    display: flex;
+}
+
+main,
+footer {
+    width: min(100% - 2rem, var(--max));
+    margin-inline: auto;
+}
+
+main {
+    min-height: 55vh;
+    padding-block: 2rem;
+}
+
+@media (min-width: 49.25em) {
+    .site-header {
+        flex-wrap: nowrap;
+    }
+
+    .site-header nav {
+        width: auto;
+        margin-left: auto;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .nav-list,
+    .js .nav-list[data-open="false"],
+    .js .nav-list[data-open="true"] {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+    }
+}
