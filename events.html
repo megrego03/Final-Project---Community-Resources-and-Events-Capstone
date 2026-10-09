@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Home | Desert Palms Community Center</title>
+    <title>Events | Desert Palms Community Center</title>
     <link rel="stylesheet" href="styles.css">
     <script src="navigation.js" defer></script>
 </head>
@@ -30,14 +30,71 @@
     </header>
 
     <main id="main">
-        <h1>Find an Event</h1>
+    <h1>Event Schedule</h1>
 
-        <p>
-            ...
-        </p>
-    </main>
+    <p>
+        Explore upcoming activities, workshops, and community gatherings.
+    </p>
 
-    <footer>
+        <section aria-labelledby="events-heading">
+        <div
+            class="table-region" role="region"
+            aria-labelledby="events-table-caption"
+            tabindex="0">
+
+            <table>
+                <caption id="events-table-caption">
+                    Upcoming community events
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Event</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Cost</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Community Cleanup</th>
+                        <td>October 18</td>
+                        <td>Central Park</td>
+                        <td>Free</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Food Drive</th>
+                        <td>October 24</td>
+                        <td>Community Center</td>
+                        <td>Free</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Family Resource Fair</th>
+                        <td>November 2</td>
+                        <td>Public Library</td>
+                        <td>Free</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Resume Workshop</th>
+                        <td>November 7</td>
+                        <td>Workforce Center</td>
+                        <td>Free</td>
+                    </tr>
+                </tbody>
+            </table>
+
+                <aside aria-labelledby="support-callout-heading">
+                    <h2 id="support-callout-heading">Want to volunteer for an event?</h2>
+                    <p>Reach out using our <a href="support.html">Support Request Form</a>.</p>
+                </aside>
+        </div>
+    </section>
+</main>
+  <footer>
         <p>&copy; 2026 Desert Palms Community Center</p>
     </footer>
 </body>

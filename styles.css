@@ -6,6 +6,7 @@
     --surface: #f1f1f1;
     --max: 70rem;
     --space: 1rem;
+    --border: #c7c2bd;
 }
 
 * {
@@ -48,6 +49,7 @@ body {
     color: inherit;
     font-size: 1.25rem;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .site-header nav {
@@ -87,6 +89,15 @@ body {
     outline-offset: .2rem;
 }
 
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+form button:focus-visible,
+.table-region:focus-visible {
+    outline: .2rem solid var(--accent);
+    outline-offset: .2rem;
+}
+
 .nav-list a:active {
     background: var(--paper);
     color: var(--brand);
@@ -116,6 +127,368 @@ footer {
 main {
     min-height: 55vh;
     padding-block: 2rem;
+}
+
+form,
+fieldset,
+.field {
+    display: grid;
+    gap: .65rem;
+}
+
+form {
+    max-width: 45rem;
+    gap: 1.5rem;
+}
+
+fieldset {
+    padding: 1rem;
+    border: 1px solid #7b746d;
+    border-radius: .5rem;
+}
+
+legend,
+label {
+    font-weight: 700;
+}
+
+.field {
+    margin-block: .5rem;
+}
+
+.help {
+    margin: 0;
+    color: #635a54;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: .75rem;
+    border: 2px solid #7b746d;
+    border-radius: .25rem;
+}
+
+textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+.choice {
+    display: flex;
+    gap: .65rem;
+    align-items: flex-start;
+    padding: .5rem 0;
+}
+
+.choice input {
+    inline-size: 1.25rem;
+    block-size: 1.25rem;
+}
+
+form button {
+    justify-self: start;
+    min-height: 44px;
+    padding: .75rem 1rem;
+    background: var(--brand);
+    color: var(--paper);
+    border: 2px solid var(--brand);
+    border-radius: .25rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.table-region {
+    max-width: 100%;
+    overflow-x: auto;
+    margin-block: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    margin-bottom: .5rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+th,
+td {
+    padding: .75rem;
+    border: 1px solid #7b746d;
+    text-align: left;
+    vertical-align: top;
+}
+
+thead th {
+    background: var(--brand);
+    color: var(--paper);
+}
+
+.resource-list {
+    display: grid;
+    gap: 1rem;
+    margin-block: 1rem;
+}
+
+.resource-card {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+    align-items: stretch;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid #c7c2bd;
+    border-radius: .5rem;
+}
+
+.resource-card-content {
+    padding: 1.25rem;
+}
+
+.resource-card-content h3 {
+    margin-top: 0;
+}
+
+.resource-card-image {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.home-layout {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin-block: 2rem;
+}
+
+.task-panel {
+    position: sticky;
+    top: 1rem;
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+}
+
+.task-panel h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+.task-nav {
+    display: grid;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.task-nav a {
+    display: block;
+    padding: .75rem;
+    color: var(--brand);
+    border-radius: .25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.task-nav a:hover {
+    background: var(--brand);
+    color: var(--paper);
+}
+
+.task-nav a:focus-visible {
+    outline: .2rem solid var(--accent);
+    outline-offset: .2rem;
+}
+
+.home-content {
+    min-width: 0;
+}
+
+.home-highlights {
+    margin-bottom: 2.5rem;
+}
+
+.home-highlights > h2 {
+    margin-top: 0;
+    color: var(--brand);
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.highlight-card {
+    display:flex;
+    padding: 1.25rem;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+}
+
+.highlight-card h3 {
+    margin-top: .25rem;
+    margin-bottom: .75rem;
+}
+
+.highlight-card p {
+    margin-block: .5rem;
+}
+
+.highlight-card a {
+    display: inline-block;
+    margin-top: auto;
+    padding-top: .75rem;
+    font-weight: 700;
+}
+
+.highlight-label {
+    margin: 0;
+    color: var(--brand);
+    font-size: .9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.highlight-image {
+    display: block;
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+}
+
+.community-feature {
+    min-width: 0;
+}
+
+.community-feature > h2 {
+    margin-top: 0;
+    margin-bottom: .75rem;
+    color: var(--brand);
+}
+
+.feature-preview {
+    display: flow-root;
+    padding: 2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: .75rem;
+}
+
+.feature-preview h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.feature-lede {
+    width: 100%;
+    max-width: none;
+    font-size: 1.1rem;
+}
+
+.feature-preview-figure {
+    float: left;
+    width: min(34%, 17rem);
+    margin: .5rem 1.5rem 1rem 0;
+}
+
+.feature-preview-figure img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.feature-preview-figure figcaption {
+    margin-top: .5rem;
+    font-size: .85rem;
+    line-height: 1.4;
+}
+
+.feature-more {
+    margin-top: .25rem;
+    padding-top: 0;
+}
+
+.feature-more a {
+    font-weight: 700;
+}
+
+
+
+@supports (shape-outside: circle(50%)) {
+    .feature-preview-figure {
+        shape-outside: circle(50%);
+        shape-margin: 1rem;
+    }
+}
+
+@media (max-width: 49.24em) {
+    .home-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .task-panel {
+        position: static;
+    }
+
+    .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 37.5em) {
+    .resource-card {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-card-image {
+        width: 100%;
+        height: 12rem;
+    }
+    .home-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .task-panel {
+        position: static;
+    }
+
+    .feature-preview {
+        padding: 1.25rem;
+    }
+
+    .feature-preview-figure {
+        float: none;
+        width: 100%;
+        margin: 1rem 0;
+        shape-outside: none;
+    }
+
+    .feature-preview-figure img {
+        border-radius: .5rem;
+    }
+
 }
 
 @media (min-width: 49.25em) {
