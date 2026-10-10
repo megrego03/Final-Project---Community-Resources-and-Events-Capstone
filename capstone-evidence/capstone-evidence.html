@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>GIT 337 Capstone Evidence</title><link rel="stylesheet" href="evidence.css">
+    </head>
+    <body>
+        <header>
+            <h1>GIT 337 Final Capstone Evidence</h1>
+        </header>
+        <main>
+            <section>
+                <h2>1. Project and URLs</h2>
+                <dl>
+                    <dt>Project, audience, and purpose</dt>
+                        <dd>
+                            Desert Palms Community Center is designed for people looking for
+                            local resources, events, volunteer opportunities, and support services. The site helps visitors
+                            discover community information, locate useful services, and request
+                            additional support.
+                        </dd>
+                    <dt>Priority tasks</dt>
+                        <dd>
+                            Find upcoming community events, locate community resources, volunteer opportunities,
+                            services, and request information or support.
+                        </dd>
+                    <dt>Pages</dt>
+                        <dd>
+                            Home, Events, Resources, and Get Support.
+                        </dd>
+                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/megrego03/Final-Project---Community-Resources-and-Events-Capstone">GitHub Repository</a></dd>
+                    <dt>Published site</dt>
+                    <dd><a href="https://megrego03.github.io/Final-Project---Community-Resources-and-Events-Capstone/">Desert Palms Community Center</a></dd>
+                    <dt>Code defense</dt>
+                    <dd><a href="https://docs.google.com/videos/d/1K-_TOQXVLLlIqRPMAm-uhix3kBmbKPFyfwMdOAiN-YA/play?usp=sharing">Pre-recorded code defense</a></dd>
+                </dl>
+            </section>
+            <section>
+                <h2>2. Concise Requirement Map</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Requirement</th>
+                            <th>Location</th>
+                            <th>Purpose</th>
+                            <th>Reuse decision</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Semantic structure</td>
+                            <td>All four HTML pages</td>
+                            <td>
+                                Provides consistent landmarks, headings, metadata,
+                                and logical source order.
+                            </td>
+                            <td>Refactor</td>
+                        </tr>
+
+                        <tr>
+                            <td>Shared design system</td>
+                            <td>styles.css</td>
+                            <td>
+                                Provides consistent colors, spacing, typography,
+                                components, and interaction states.
+                            </td>
+                            <td>Refactor</td>
+                        </tr>
+
+                        <tr>
+                            <td>Figure and caption</td>
+                            <td>index.html</td>
+                            <td>
+                                Supports the community bulletin-board feature
+                                with meaningful visual content.
+                            </td>
+                            <td>Adapt</td>
+                        </tr>
+
+                        <tr>
+                            <td>Accessible data table</td>
+                            <td>events.html</td>
+                            <td>
+                                Allows visitors to compare upcoming community events.
+                            </td>
+                            <td>Adapt</td>
+                        </tr>
+
+                        <tr>
+                            <td>Purposeful form</td>
+                            <td>support.html</td>
+                            <td>
+                                Allows visitors to request information or support.
+                            </td>
+                            <td>Adapt</td>
+                        </tr>
+
+                        <tr>
+                            <td>SVG</td>
+                            <td>index.html</td>
+                            <td>
+                                Provides a custom visual identity for the Desert Palms Community Center.
+                            </td>
+                            <td>New</td>
+                        </tr>
+
+                        <tr>
+                            <td>Responsive navigation and layout</td>
+                            <td>All pages and navigation.js</td>
+                            <td>
+                                Provides consistent access to all major pages
+                                across narrow and wide layouts.
+                            </td>
+                            <td>Refactor</td>
+                        </tr>
+
+                        <tr>
+                            <td>Positioning and layering</td>
+                            <td>Home page task panel</td>
+                            <td>
+                                Uses sticky positioning to keep priority navigation available while visitors move through the Home page on wider screens.
+                            </td>
+                            <td>Adapt</td>
+                        </tr>
+
+                        <tr>
+                            <td>CSS shape</td>
+                            <td>Home page feature image</td>
+                            <td>
+                                Creates purposeful text flow around the feature image
+                                while retaining a readable fallback.
+                            </td>
+                            <td>Adapt</td>
+                        </tr>
+
+                       <tr>
+                            <td>Effect or motion</td>
+                            <td>Home page highlight cards</td>
+                            <td>
+                                Provides hover and focus feedback through a subtle card lift and shadow while including a reduced-motion fallback.
+                            </td>
+                            <td>Adapt</td>
+                        </tr>
+
+                        <tr>
+                            <td>Testing</td>
+                            <td>Published website</td>
+                            <td>
+                                Verifies responsive behavior, accessibility,
+                                form behavior, resilience, and browser compatibility.
+                            </td>
+                            <td>New</td>
+                        </tr>
+
+                        <tr>
+                            <td>Documentation</td>
+                            <td>capstone-evidence.html</td>
+                            <td>
+                                Records the project plan, release checks,
+                                findings, repairs, and supporting evidence.
+                            </td>
+                            <td>New</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h2>3. Focused Release Check</h2>
+                <ul>
+                    <li>HTML validation: Pass</li>
+                    <li>CSS validation: Reviewed; CSS Shapes properties and one vendor-prefixed pseudo-element were intentionally retained.</li>
+                    <li>Published links and assets: Pass</li>
+                    <li>320 CSS pixels and 200% zoom: Pass</li>
+                    <li>Keyboard and visible focus: Pass</li>
+                    <li>Form labels, constraints, errors, and recovery: Pass</li>
+                    <li>Reduced motion and JavaScript unavailable: Pass</li>
+                    <li>Two current browsers: Pass</li>
+                </ul>
+            </section>
+            <section>
+                <h2>4. Three Findings and Repairs</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Finding and condition</th>
+                            <th>Impact</th>
+                            <th>Repair</th>
+                            <th>Exact retest and result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>At an intermediate width around 700px-790px, the Home page layout became cramped because the sidebar and two-column highlight cards did not have enough space.</td>
+                            <td>Home page layout, especially the Find What You Need panel and What's Happening cards.</td>
+                            <td>Adjusted the responsive breakpoint so the Home layout and highlight cards stack below 49.25em.</td>
+                            <td>Retested at 787px and 788px. At 787px, the layout stacked correctly. At 788px, the desktop navigation, sidebar, and two-column highlight layout returned without cramped content or page-level overflow.</td>
+                        </tr>
+
+                        <tr>
+                            <td>HTML validation reported that the Events section lacked an identifying heading.</td>
+                            <td>Events page heading structure and Upcoming Events table section.</td>
+                            <td>Changed the main page heading to Scheduled Events and added an Upcoming Events heading to identify the table section.</td>
+                            <td>Ran the HTML validator again. The section-heading warning was resolved.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Responsive and zoom testing showed that the published site remained usable at 320 CSS pixels and 200% browser zoom.</td>
+                            <td>Navigation, page content, cards, images, headings, and responsive layouts across the published site.</td>
+                            <td>No repair was required because no overflow, overlapping content, or loss of functionality was observed.</td>
+                            <td>Repeated the 320px and 200% zoom tests. Content remained readable and usable with no page-level horizontal overflow observed.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </section>
+           <section>
+            <h2>5. Screenshots</h2>
+
+            <figure>
+                <img src="786px_to_787px.jpeg" alt="Side-by-side responsive comparison of the Desert Palms Community Center Home page at 787 pixels and 788 pixels wide" width="550px">
+                <figcaption>
+                    <strong>Figure 1. Responsive breakpoint repair and retest.</strong>
+                    At 787px, the Home page uses the narrow stacked layout and mobile navigation. At 788px, the desktop navigation, sidebar, and two-column highlight layout return. This confirms that the repaired breakpoint responds without cramped content or page-level horizontal overflow.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="200_percent_zoom.jpg" alt="Desert Palms Community Center Home page displayed at 200 percent browser zoom" width="550px">
+                <figcaption>
+                    <strong>Figure 2. 200% zoom test.</strong>
+                    At 200% browser zoom, the Home page remains readable and usable. The task navigation, content cards, images, text, and links remain visible without overlapping or clipped content.
+                </figcaption>
+            </figure>
+        </section>
+            <section>
+                <h2>6. Sources, Assets, and AI</h2>
+                <p><strong>MDN/official sources:</strong></p>
+
+                    <ul class="sources-list">
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_documents">Structuring documents</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section">section HTML element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current">aria-current attribute</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design">Responsive web design</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries">CSS media queries</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position">CSS position property</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figure">figure HTML element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figcaption">figcaption HTML element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/shape-outside">shape-outside property</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside">Using shape-outside</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table">table HTML element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/caption">caption HTML element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/th">th HTML element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details">details HTML element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/summary">summary HTML element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label">label HTML element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fieldset">fieldset HTML element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/legend">legend HTML element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/required">required attribute</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/email">Input type="email"</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select">select HTML element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea">textarea HTML element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40media/prefers-reduced-motion">prefers-reduced-motion media feature</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg">svg SVG element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/path">path SVG element</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">Document.querySelector()</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">Element.classList</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute">Element.setAttribute()</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset">HTMLElement.dataset</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">EventTarget.addEventListener()</a></li>
+
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus">HTMLElement.focus()</a></li>
+                    </ul>
+               
+                <p><strong>Assets and licenses:</strong></p>
+
+                    <ul class="assets-list">
+                        <li>
+                            <strong>food-assistance.jpeg:</strong>
+                            "Woman holding groceries in shopping cart" by WavebreakMediaMicro.
+                            Adobe Stock file #121856565.
+                            Downloaded from Adobe Stock under the Standard License.
+                            Used for the Food Assistance resource card.
+                        </li>
+
+                        <li>
+                            <strong>housing-support.jpeg:</strong>
+                            Shelter-support image depicting adults receiving assistance while a volunteer registers a senior woman, by pressmaster.
+                            Adobe Stock file #2110750873.
+                            Downloaded from Adobe Stock under the Standard License.
+                            Used for the Housing Support resource card.
+                        </li>
+
+                        <li>
+                            <strong>employment-services.jpeg:</strong>
+                            Business meeting and handshake image by fizkes.
+                            Adobe Stock file #2196802865.
+                            Downloaded from Adobe Stock under the Standard License.
+                            Used for the Employment Services resource card.
+                        </li>
+
+                        <li>
+                            <strong>family-programs.jpeg:</strong>
+                            Family-safety image showing paper family figures held in a person's hands, by Best.
+                            Adobe Stock file #1676628200.
+                            The Adobe Stock listing identifies this asset as generated with AI.
+                            Downloaded from Adobe Stock under the Standard License.
+                            Used for the Family Programs resource card.
+                        </li>
+
+                        <li>
+                            <strong>volunteer-opportunities.jpeg:</strong>
+                            "people volunteer keeping garbage plastic bottle into black bag at park river in sunset" by lovelyday12.
+                            Adobe Stock file #307786214.
+                            Downloaded from Adobe Stock under the Standard License.
+                            Used for the Volunteer Opportunities resource card.
+                        </li>
+
+                        <li>
+                            <strong>fall-leaves.jpeg:</strong>
+                            Autumn cleanup image showing a rake in a pile of leaves near a tree, by maxbelchenko.
+                            Adobe Stock file #2169557447.
+                            Downloaded from Adobe Stock under the Standard License.
+                            Used for the Fall Community Cleanup feature on the Home page.
+                        </li>
+
+                        <li>
+                            <strong>pantry-volunteer.jpeg:</strong>
+                            Food-bank volunteer image showing a woman organizing canned-food donations, by ALLmost.
+                            Adobe Stock file #2212230606.
+                            The Adobe Stock listing identifies this asset as generated with AI.
+                            Downloaded from Adobe Stock under the Standard License.
+                            Used for the Community Pantry Volunteers feature on the Home page.
+                        </li>
+
+                        <li>
+                            <strong>community_board.jpg:</strong>
+                            Community bulletin board photograph by Melanie Weidmann from Unsplash.
+                            Used under the Unsplash License.
+                            Used for the "Why Community Bulletin Boards Still Matter" Community Feature on the Home page.
+                        </li>
+
+                        <li>
+                            <strong>Inline Desert Palms SVG:</strong>
+                            Original palm-tree, sun, and ground-line SVG created specifically for the Desert Palms Community Center capstone.
+                            The SVG was created directly in index.html and styled through the shared CSS design system.
+                            No external image license was required.
+                        </li>
+                    </ul>
+                
+                <p><strong>AI disclosure:</strong> Limited AI assistance. ChatGPT was used to identify a possible placeholder-link gap on the Resources page. The href="#" links were flagged as a potential issue for the capstone requirement that links work. I decided to replace those placeholder links with native details and summary disclosures and implemented the expandable resource information myself.</p>
+            </section>
+        </main>
+    </body>
+</html>
+
